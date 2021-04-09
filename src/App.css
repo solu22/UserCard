@@ -54,11 +54,7 @@ h5{
 }
 
 /* single user details*/
-.container{
-  width:100%;
-  background-color:#695d62;
-  padding: 20px;
-}
+
 
 .details{
  
@@ -69,12 +65,19 @@ h5{
   padding: 1rem;
   line-height: 0.5;
   border: 2px solid white;
-  border-radius: 25px
+  border-radius: 25px;
+  margin-top: 10px;
+  height: 100vh;
 }
- 
+
+ul{
+  line-height: 0.0001;
+}
+
 li{
   margin: 7px;
   list-style: none;
+
 }
 
 .button{
