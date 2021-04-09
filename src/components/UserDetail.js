@@ -1,6 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import RemoveIcon from '@material-ui/icons/Remove';
+
+/* material ui import*/
+import PersonIcon from '@material-ui/icons/Person';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import MailIcon from '@material-ui/icons/Mail';
+import PhoneIcon from '@material-ui/icons/Phone';
+import BusinessIcon from '@material-ui/icons/Business';
+import LanguageIcon from '@material-ui/icons/Language';
+import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
+import StreetviewIcon from '@material-ui/icons/Streetview';
+import ApartmentIcon from '@material-ui/icons/Apartment';
+import LocationCityIcon from '@material-ui/icons/LocationCity';
+import PostAddIcon from '@material-ui/icons/PostAdd';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+
 import axios from "axios";
 
 /*single user details page, fetching apis and displaying details */
@@ -26,18 +41,18 @@ const UserDetail = () => {
         <h5>User Details</h5>
       <div className="details">
           
-        <p><RemoveIcon/> name: {user.name}</p>
-        <p><RemoveIcon/> username: {user.username}</p>
-        <p><RemoveIcon/> email: {user.email}</p>
-        <p><RemoveIcon/>phone: {user.phone}</p>
-        <p><RemoveIcon/>company: {user.company.name}</p>
-        <p><RemoveIcon/>website: {user.website}</p>
-        <p><RemoveIcon/>address: </p>
+        <p><PersonIcon /> <MoreVertIcon/> {user.name}</p>
+        <p><AccountCircleIcon/> <MoreVertIcon/> {user.username}</p>
+        <p><MailIcon/> <MoreVertIcon/>  {user.email}</p>
+        <p><PhoneIcon/> <MoreVertIcon/> {user.phone}</p>
+        <p><BusinessIcon /> <MoreVertIcon/> {user.company.name}</p>
+        <p><LanguageIcon/> <MoreVertIcon/> {user.website}</p>
+        <p><EmojiTransportationIcon/> <MoreVertIcon/> </p>
         <ul>
-          <li>{user.address.street}</li><br/>
-          <li>{user.address.suite}</li><br/>
-          <li>{user.address.city}</li><br/>
-          <li>{user.address.zipcode}</li>
+          <li><FiberManualRecordIcon style={{fontSize:"small"}}/><StreetviewIcon/> {user.address.street}</li><br/>
+          <li><FiberManualRecordIcon style={{fontSize:"small"}}/><ApartmentIcon/> {user.address.suite}</li><br/>
+          <li><FiberManualRecordIcon style={{fontSize:"small"}}/><LocationCityIcon/> {user.address.city}</li><br/>
+          <li><FiberManualRecordIcon style={{fontSize:"small"}}/><PostAddIcon/> {user.address.zipcode}</li>
         </ul>
         <div className="button">
         <Link to="/">
